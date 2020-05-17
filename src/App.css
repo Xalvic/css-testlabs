@@ -1,38 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #111111;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.head {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 40px 10px 40px;
+  font-size: 75px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px rgb(0, 141, 47), 0 0 30px rgb(0, 139, 23),
+    0 0 6px rgb(7, 87, 0);
+  color: rgb(0, 124, 31);
+}
+.head p {
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+#css:hover {
+  text-shadow: 0 0 200px #ffffff, 0 0 80px #008000, 0 0 6px #0000ff;
+}
+#labs {
+  text-shadow: 0 0 80px rgb(1, 117, 7), 0 0 30px rgb(0, 124, 52),
+    0 0 6px rgb(0, 94, 23);
+  animation: right 10s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#test:hover {
+  text-shadow: 0 0 80px rgb(1, 117, 7), 0 0 30px rgb(0, 124, 52),
+    0 0 6px rgb(0, 94, 23);
+}
+#test {
+  animation: delay 8s linear forwards;
+  animation-delay: 2s;
+}
+@keyframes delay {
+  0% {
+    fill: none;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    fill: #008000;
+  }
+}
+.cls-1 {
+  fill: none;
+  stroke: #707070;
+  font-size: 90px;
+  font-family: "Monoton", cursive;
+  animation: lol 7s linear backwards;
+}
+#css {
+  fill: #14a5ff;
+  text-shadow: 0 0 80px #22cef9, 0 0 30px #2dcef7, 0 0 6px #049ec5;
+  animation: left 11s linear forwards;
+}
+.cls-2 {
+  fill: none;
+  stroke: #ffa502;
+  stroke-linecap: round;
+  stroke-width: 8px;
+  stroke-dasharray: 800px;
+  stroke-dashoffset: 800px;
+  animation: lol 4s linear forwards;
+}
+.cls-3 {
+  filter: url(#Line_3);
+}
+@keyframes lol {
+  0% {
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 790px;
+  }
+  100% {
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes left {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+    text-shadow: 0 0 50px #21aed18f, 0 0 30px #1d9dbdb0, 0 0 6px #007d9c94;
+    fill: #14a5ff;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+@keyframes right {
+  0%,
+  12%,
+  18.999%,
+  23%,
+  31.999%,
+  37%,
+  44.999%,
+  46%,
+  49.999%,
+  51%,
+  58.999%,
+  61%,
+  68.999%,
+  71%,
+  85.999%,
+  96%,
+  100% {
+    opacity: 0.99;
+    text-shadow: 0 0 80px rgb(1, 117, 7), 0 0 30px rgb(0, 124, 52),
+      0 0 6px rgb(0, 94, 23);
+  }
+  19%,
+  22.99%,
+  32%,
+  36.999%,
+  45%,
+  45.999%,
+  50%,
+  50.99%,
+  59%,
+  60.999%,
+  69%,
+  70.999%,
+  86%,
+  95.999% {
+    opacity: 0.4;
+    text-shadow: none;
   }
 }
