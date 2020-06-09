@@ -6,141 +6,59 @@
 body {
   background-color: #111111;
 }
-.head {
+
+.Head h1 {
+  color: #ffffff;
+}
+
+.List {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  padding: 20px 40px 10px 40px;
-  font-size: 75px;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0 0 80px rgb(0, 141, 47), 0 0 30px rgb(0, 139, 23),
-    0 0 6px rgb(7, 87, 0);
-  color: rgb(0, 124, 31);
 }
-.head p {
-  margin: 0;
+.List a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
-#css:hover {
-  text-shadow: 0 0 200px #ffffff, 0 0 80px #008000, 0 0 6px #0000ff;
+.List .box h4 {
+  font-size: 20px;
+  position: relative;
 }
-#labs {
-  text-shadow: 0 0 80px rgb(1, 117, 7), 0 0 30px rgb(0, 124, 52),
-    0 0 6px rgb(0, 94, 23);
-  animation: right 10s linear infinite;
+.List .box h4:after {
+  left: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background-color: #d60000;
+  z-index: -1;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 200ms linear;
+}
+.List .box:hover h4:after {
+  height: 100%;
 }
 
-#test:hover {
-  text-shadow: 0 0 80px rgb(1, 117, 7), 0 0 30px rgb(0, 124, 52),
-    0 0 6px rgb(0, 94, 23);
+.List .box img {
+  /* width: 400px; */
+  transition: 500ms ease-out;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-#test {
-  animation: delay 8s linear forwards;
-  animation-delay: 2s;
+.List .box img:nth-child(2) {
+  width: 400px;
 }
-@keyframes delay {
-  0% {
-    fill: none;
-  }
-  100% {
-    fill: #008000;
-  }
+.List .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 800ms ease-in;
 }
-.cls-1 {
-  fill: none;
-  stroke: #707070;
-  font-size: 90px;
-  font-family: "Monoton", cursive;
-  animation: lol 7s linear backwards;
-}
-#css {
-  fill: #14a5ff;
-  text-shadow: 0 0 80px #22cef9, 0 0 30px #2dcef7, 0 0 6px #049ec5;
-  animation: left 11s linear forwards;
-}
-.cls-2 {
-  fill: none;
-  stroke: #ffa502;
-  stroke-linecap: round;
-  stroke-width: 8px;
-  stroke-dasharray: 800px;
-  stroke-dashoffset: 800px;
-  animation: lol 4s linear forwards;
-}
-.cls-3 {
-  filter: url(#Line_3);
-}
-@keyframes lol {
-  0% {
-    stroke-dasharray: 800px;
-    stroke-dashoffset: 790px;
-  }
-  100% {
-    stroke-dasharray: 800px;
-    stroke-dashoffset: 0px;
-  }
-}
-@keyframes left {
-  0%,
-  19.999%,
-  22%,
-  62.999%,
-  64%,
-  64.999%,
-  70%,
-  100% {
-    opacity: 0.99;
-    text-shadow: 0 0 50px #21aed18f, 0 0 30px #1d9dbdb0, 0 0 6px #007d9c94;
-    fill: #14a5ff;
-  }
-  20%,
-  21.999%,
-  63%,
-  63.999%,
-  65%,
-  69.999% {
-    opacity: 0.4;
-    text-shadow: none;
-  }
-}
-@keyframes right {
-  0%,
-  12%,
-  18.999%,
-  23%,
-  31.999%,
-  37%,
-  44.999%,
-  46%,
-  49.999%,
-  51%,
-  58.999%,
-  61%,
-  68.999%,
-  71%,
-  85.999%,
-  96%,
-  100% {
-    opacity: 0.99;
-    text-shadow: 0 0 80px rgb(1, 117, 7), 0 0 30px rgb(0, 124, 52),
-      0 0 6px rgb(0, 94, 23);
-  }
-  19%,
-  22.99%,
-  32%,
-  36.999%,
-  45%,
-  45.999%,
-  50%,
-  50.99%,
-  59%,
-  60.999%,
-  69%,
-  70.999%,
-  86%,
-  95.999% {
-    opacity: 0.4;
-    text-shadow: none;
-  }
+.List .box:hover img {
+  transition: all 800ms ease-in;
+  scale: 1.1;
+  clip-path: polygon(8% 8%, 92% 8%, 92% 92%, 8% 92%);
 }
